@@ -29,7 +29,6 @@ app.get('/api', (req, res) => {
   res.json({ 
     message: 'Appointment Booking API',
     endpoints: {
-      health: '/api/health',
       services: '/api/services',
       appointments: '/api/appointments'
     }
@@ -55,8 +54,8 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
-  console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 
 export default app;
