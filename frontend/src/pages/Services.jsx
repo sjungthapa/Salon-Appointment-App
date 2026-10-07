@@ -154,7 +154,7 @@ function Services() {
           <tbody>
             {services.length === 0 ? (
               <tr>
-                <td colSpan="4" style={{ textAlign: 'center' }}>No services found</td>
+                <td colSpan="4" className="empty-state">No services found</td>
               </tr>
             ) : (
               services.map((service) => (

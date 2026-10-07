@@ -68,20 +68,15 @@ function Appointments() {
 
   return (
     <div>
-      <div className="page-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="page-header">
         <h1 className="page-title">Appointments</h1>
         
-        <div>
-          <label style={{ marginRight: '0.5rem', fontWeight: '500' }}>Filter by Status:</label>
+        <div className="filter-controls">
+          <label>Filter by Status:</label>
           <select 
             value={statusFilter} 
             onChange={(e) => setStatusFilter(e.target.value)}
-            style={{ 
-              padding: '0.5rem', 
-              borderRadius: '4px', 
-              border: '1px solid #d1d5db',
-              fontSize: '1rem'
-            }}
+            className="filter-select"
           >
             <option value="">All</option>
             <option value="Pending">Pending</option>
@@ -110,7 +105,7 @@ function Appointments() {
           <tbody>
             {appointments.length === 0 ? (
               <tr>
-                <td colSpan="7" style={{ textAlign: 'center' }}>No appointments found</td>
+                <td colSpan="7" className="empty-state">No appointments found</td>
               </tr>
             ) : (
               appointments.map((appointment) => (
@@ -130,13 +125,7 @@ function Appointments() {
                       <select
                         value={appointment.status}
                         onChange={(e) => handleStatusChange(appointment._id, e.target.value)}
-                        style={{ 
-                          padding: '0.25rem 0.5rem',
-                          borderRadius: '4px',
-                          border: '1px solid #d1d5db',
-                          fontSize: '0.875rem',
-                          marginRight: '0.5rem'
-                        }}
+                        className="status-select"
                       >
                         <option value="Pending">Pending</option>
                         <option value="Confirmed">Confirmed</option>

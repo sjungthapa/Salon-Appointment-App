@@ -85,17 +85,7 @@ function CreateAppointment() {
       </div>
 
       {error && <div className="error">{error}</div>}
-      {success && (
-        <div style={{ 
-          backgroundColor: '#d1fae5', 
-          color: '#065f46', 
-          padding: '1rem', 
-          borderRadius: '4px', 
-          marginBottom: '1rem' 
-        }}>
-          {success}
-        </div>
-      )}
+      {success && <div className="success">{success}</div>}
 
       <div className="form-container">
         <form onSubmit={handleSubmit}>
@@ -177,7 +167,6 @@ function CreateAppointment() {
               onChange={handleChange}
               rows="4"
               placeholder="Any special requests or notes..."
-              style={{ resize: 'vertical' }}
             />
           </div>
 
