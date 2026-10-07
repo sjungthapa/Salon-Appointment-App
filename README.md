@@ -39,39 +39,6 @@ A full-stack salon appointment booking application built with React and Express.
 - MongoDB with Mongoose
 - CORS enabled
 
-## Project Structure
-
-```
-Appointment Booking System/
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   │   └── database.js          # MongoDB connection
-│   │   ├── models/
-│   │   │   ├── Service.js           # Service schema
-│   │   │   └── Appointment.js       # Appointment schema
-│   │   ├── routes/
-│   │   │   ├── service.routes.js    # Service CRUD APIs
-│   │   │   └── appointment.routes.js # Appointment CRUD APIs
-│   │   └── server.js                # Main server file
-│   ├── .env                          # Environment variables
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Services.jsx         # Services management page
-│   │   │   ├── Appointments.jsx     # Appointments listing page
-│   │   │   └── CreateAppointment.jsx # Booking form page
-│   │   ├── services/
-│   │   │   └── api.js               # API service layer
-│   │   ├── App.jsx                  # Main app component
-│   │   ├── App.css                  # Global styles
-│   │   └── main.jsx                 # Entry point
-│   ├── .env                          # Environment variables
-│   └── package.json
-└── README.md
-```
-
 ## Prerequisites
 
 - Node.js (v18 or higher)
